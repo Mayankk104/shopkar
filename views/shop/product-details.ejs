@@ -1,0 +1,17 @@
+<% include ../includes/head %>
+<link rel="stylesheet" href="/css/product.css">
+    </head>
+
+<body>
+    <% include ../includes/navigation %>
+    <main class="centerd">
+        <h1><%=product.title%></h1><hr>
+        <img src="<%=product.imageUrl%>" alt="<%=product.title%>">
+        <h3>Price: $ <%=product.price%></h3>
+        <p><%=product.description%></p>
+        <form action="/add-to-cart" method="POST">
+            <button class='btn'>Add it Cart</button>
+        </form>
+    </main>
+
+    <% include ../includes/end %>
